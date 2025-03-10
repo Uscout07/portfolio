@@ -47,11 +47,11 @@ export default function Services({ themeColor = "" }) {
                 </div>
             </div>
             <div className='flex items-center justify-center'>
-                <button className="text-[4vh] max-md:text-[3vh] text-white py-2 px-5 rounded-full animate-pulse hover:animate-none transition-all duration-300 ease-in-out hover:scale-105 my-4"
+                <Link href="#contact-section" className="text-[4vh] max-md:text-[3vh] text-white py-2 px-5 rounded-full animate-pulse hover:animate-none transition-all duration-300 ease-in-out hover:scale-105 my-4"
                     style={{ backgroundColor: themeColor }}
                 >
                     INQUIRE NOW
-                </button>
+                </Link>
             </div>
         </div>
     )

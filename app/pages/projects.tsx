@@ -46,7 +46,9 @@ export default function Projects({ themeColor = "" }) {
                 ))}
                 
             </div>
-            <p className="text-gray-600 animate-pulse text-center ibm-plex-mono text-3xl">Pls Scroll &#10513; </p>
+            <div className="w-full flex items-center justify-center">
+            <p className="text-gray-600 animate-pulse text-center ibm-plex-mono text-3xl mx-auto  flex items-end justify-center">Pls Scroll &#10513; </p>
+            </div>
         </div>
     );
 }

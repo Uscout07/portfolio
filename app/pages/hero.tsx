@@ -1,3 +1,4 @@
+import Link from "next/link"
 export default function Hero({ themeColor = "#06AA5B" }) {
     const stylizedText = `<h1>Welcome to My Portfolio</h1>
 <p>Hello! I'm Udit Pant, a passionate web developer and technology enthusiast based in Delhi, India. 
@@ -31,12 +32,13 @@ Explore my work and feel free to connect!</p>
                 <div className="px-6 py-4 font-bold l text-white max-md:mt-10 mt-24 text-7xl max-md:text-[10vw]">
                     WELCOME TO MY DEVFOLIO
                 </div>
-                <button 
+                <Link
+                    href="#contact-section"
                     className="text-3xl py-3 px-5 bg-white rounded-full animate-pulse hover:animate-none transition-all duration-300 ease-in-out hover:scale-105"
                     style={{ color: themeColor }}
                 >
                     GET IN TOUCH
-                </button>
+                </Link>
             </div>
         </div>
     )
