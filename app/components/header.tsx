@@ -229,7 +229,7 @@ export default function Navhead({ themeColor =""}) {
                 {/* Desktop Menu - Only show for non-mobile */}
                 {!isMobile && (
                     <div
-                        className="absolute top-[10vh] right-0 pr-5 flex flex-col font-ibm text-[4vh] gap-[0.5vh] mr-4 px-4 ibm-plex-mono-regular md:mr-4 transition-all duration-300 ease-in-out bg-[#ffffff4f]"
+                        className="absolute top-[10vh] right-0 pr-5 flex flex-col font-ibm text-[4vh] gap-[0.5vh] mr-4 px-4 ibm-plex-mono-regular md:mr-4 transition-all duration-300 ease-in-out bg-[#ffffffa0] backdrop-blur-sm"
                         style={{ 
                             borderRightWidth: "2px",
                             borderRightColor: themeColor,
