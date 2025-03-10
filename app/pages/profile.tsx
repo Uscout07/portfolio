@@ -3,9 +3,9 @@ import Aos from "aos";
 
 export default function Profile({ themeColor = "#F89245" }) {
   return (
-    <div  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" id="profile-section" className="w-screen relative bg-transparent overflow-hidden">
-      <div className="h-[50vh] max-md:h-[25vh]"></div>
-      <div className="absolute inset-0 flex justify-center items-center">
+    <div  id="profile-section" className="w-screen relative bg-transparent overflow-hidden">
+      <div  className="h-[50vh] max-md:h-[25vh]"></div>
+      <div  className="absolute inset-0 flex justify-center items-center">
         <img
           className="w-[30%] max-md:w-4/5 absolute animate-spin z-10"
           src="/profileCircle.png"

@@ -35,7 +35,7 @@ export default function Navhead({ themeColor =""}) {
     };
 
     return (
-        <div className="w-screen p-5 z-50 top-0 fixed flex justify-between">
+        <div className="p-5 z-50 top-0 fixed flex w-screen justify-between">
             {/* Logo */}
             <div
                 className="w-[7vh] h-[7vh] rounded-full text-white font-passion text-[5vh] flex items-center justify-center"
@@ -45,7 +45,7 @@ export default function Navhead({ themeColor =""}) {
             </div>
 
             {/* Social Icons */}
-            <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 ${showMenu && isMobile ? 'hidden' : 'block'}`}>
+            <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 ${showMenu && isMobile ? 'hidden' : 'flex'}`}>
                 <div 
                     className="py-5 px-5 h-[5vh] rounded-br-lg rounded-bl-lg text-white flex justify-center items-center gap-4"
                     style={{ backgroundColor: themeColor }}

@@ -109,12 +109,7 @@ export default function Page() {
   }, []);
 
   return (
-    <>
-      <style jsx global>{`
-        :root {
-          --theme-color: #06AA5B;
-        }
-      `}</style>
+    <div className="overflox-x-hidden w-screen"> 
 
       <Navhead themeColor={themeColor} />
       <Hero themeColor={themeColor} />
@@ -123,6 +118,6 @@ export default function Page() {
       <Services themeColor={themeColor} />
       <Contact />
 
-    </>
+    </div>
   );
 }

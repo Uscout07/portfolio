@@ -3,6 +3,7 @@
 
 body {
   margin: 0;
+  width: 100vw;
   background-image: url("/background.png"); /* Corrected path */
   background-repeat: repeat-y; 
   overflow-x: hidden;

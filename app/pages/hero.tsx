@@ -6,7 +6,7 @@ I specialize in creating dynamic, user-centric web solutions.
 Explore my work and feel free to connect!</p>
 `
     return (
-        <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease-in-out" id="hero-section" className="w-screen relative max-h-[100vh] bg-transparent overflow-hidden">
+        <div  id="hero-section" className="w-screen relative max-h-[100vh] bg-transparent overflow-hidden">
             <div className="absolute inset-0 flex justify-center items-center" >
                 <img 
                     className="max-md:w-[97vw] w-[40vw] absolute animate-spin z-10" 
