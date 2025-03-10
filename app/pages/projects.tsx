@@ -17,7 +17,7 @@ export default function Projects({ themeColor = "" }) {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="snap-center flex flex-col justify-between p-4 rounded-lg min-h-[70%] max-md:min-w-[80%] max-lg:min-w-[50%] lg:min-w-[30%]  hover:shadow-xl hover:shadow-red-400  transition-all duration-300 ease-in-out "
+                        className="snap-center flex flex-col justify-between p-4 rounded-lg min-h-[70%] max-md:min-w-[95%] max-lg:min-w-[50%] lg:min-w-[30%]  hover:shadow-xl hover:shadow-red-400  transition-all duration-300 ease-in-out "
                         style={{ backgroundColor: themeColor }}
                     >
                         <div>
@@ -37,14 +37,16 @@ export default function Projects({ themeColor = "" }) {
                             </div>
                             <p className="ibm-plex-mono-regular text-[1.5vh] pb-2 text-white">{project.desc}</p>
                         </div>
-                        <div className="w-[90%] flex flex-wrap items-start py-2 gap-8 px-2">
+                        <div className="w-[90%] flex flex-wrap items-start py-2 max-md:gap-3 max-lg:gap-6 gap-8 px-2">
                             {project.icons.map((icon, idx) => (
-                                <Icon key={idx} icon={icon} className="hover:scale-150 transition-all duration-300 ease-in-out" width="32" height="32" />
+                                <Icon key={idx} icon={icon} className="hover:scale-150 transition-all duration-300 ease-in-out max-md:text-[1.5rem] max-lg:text-[1.5rem] text-[2rem]"  />
                             ))}
                         </div>
                     </div>
                 ))}
+                
             </div>
+            <p className="text-gray-600 animate-pulse text-center ibm-plex-mono text-3xl">Pls Scroll &#10513; </p>
         </div>
     );
 }
