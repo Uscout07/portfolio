@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Passion_One } from 'next/font/google';
+import Navhead from "./components/header";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const passionOne = Passion_One({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'], // Add required weights
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -24,11 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+     
+     <body className={passionOne.className}>{children}</body>
     </html>
   );
 }
