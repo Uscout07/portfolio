@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 export default function Hero({ themeColor = "#06AA5B" }) {
     const stylizedText = `<h1>Welcome to My Portfolio</h1>
 <p>Hello! I'm Udit Pant, a passionate web developer and technology enthusiast based in Delhi, India. 
@@ -6,7 +6,7 @@ I specialize in creating dynamic, user-centric web solutions.
 Explore my work and feel free to connect!</p>
 `
     return (
-        <div id="hero-section" className="w-screen relative max-h-[100vh] bg-transparent overflow-hidden">
+        <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease-in-out" id="hero-section" className="w-screen relative max-h-[100vh] bg-transparent overflow-hidden">
             <div className="absolute inset-0 flex justify-center items-center" >
                 <img 
                     className="max-md:w-[97vw] w-[40vw] absolute animate-spin z-10" 

@@ -19,7 +19,10 @@ export async function POST(request: Request) {
       from: process.env.EMAIL_USER,
       to: process.env.RECEIVER_EMAIL, // the email address you want to receive the form data
       subject: subject,
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: `Sent from portfolio \n
+       Name: ${name}\n
+       Email: ${email}\n
+       Message: ${message}`,
     });
     return NextResponse.json({ message: 'Email sent successfully' });
   } catch (error) {

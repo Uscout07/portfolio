@@ -13,11 +13,11 @@ export default function Projects({ themeColor = "" }) {
     return (
         <div id='projects-section' className='w-screen overflow-hidden'>
             <h1 className='text-center font-bold py-10 uppercase text-[8vh] max-lg:text-[6vh]'>Projects</h1>
-            <div className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 pb-10 scrollbar-hide">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 pb-10 scrollbar-hide">
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="snap-center flex flex-col justify-between p-4 rounded-lg min-h-[70%] max-md:min-w-[95%] max-lg:min-w-[50%] lg:min-w-[30%]  hover:shadow-xl hover:shadow-red-400  transition-all duration-300 ease-in-out "
+                        className="snap-center flex flex-col justify-between p-4 rounded-lg min-h-[70%] max-md:min-w-[95%] max-lg:min-w-[50%] lg:min-w-[30%] hover:scale-95  transition-all duration-300 ease-in-out "
                         style={{ backgroundColor: themeColor }}
                     >
                         <div>
@@ -46,7 +46,7 @@ export default function Projects({ themeColor = "" }) {
                 ))}
                 
             </div>
-            <div className="w-full flex items-center justify-center">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" className="w-full flex items-center justify-center">
             <p className="text-gray-600 animate-pulse text-center ibm-plex-mono text-3xl mx-auto  flex items-end justify-center">Pls Scroll &#10513; </p>
             </div>
         </div>

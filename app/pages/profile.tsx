@@ -1,8 +1,9 @@
-import { Icon } from "@iconify/react/dist/iconify.js"
+import { Icon } from "@iconify/react/dist/iconify.js";
+import Aos from "aos";
 
 export default function Profile({ themeColor = "#F89245" }) {
   return (
-    <div id="profile-section" className="w-screen relative bg-transparent overflow-hidden">
+    <div  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" id="profile-section" className="w-screen relative bg-transparent overflow-hidden">
       <div className="h-[50vh] max-md:h-[25vh]"></div>
       <div className="absolute inset-0 flex justify-center items-center">
         <img
@@ -14,6 +15,7 @@ export default function Profile({ themeColor = "#F89245" }) {
         <img className="relative z-30 max-md:w-[55vw] w-1/5 rounded-full" src="/photo.png" alt="" />
       </div>
       <div
+      data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out"
         className={`
           modileProfileDiv
           relative w-full max-md:h-[30vh] 

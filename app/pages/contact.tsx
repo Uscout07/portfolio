@@ -41,7 +41,7 @@ export default function Contact() {
 
     return (
         <div id='contact-section' className="w-screen relative bg-transparent overflow-hidden">
-            <div className="relative w-full min-h-[70vh] z-20 flex flex-col items-center justify-start">
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" className="relative w-full min-h-[70vh] z-20 flex flex-col items-center justify-start">
                 <div className="w-full px-6 py-2 font-bold md:mt-[15vh] text-center uppercase overflow-hidden max-md:mt-2">
                     <div className="relative text-[8vh] text-center z-40 max-md:text-[2rem]">
                         get in touch - let's work together - contact me
