@@ -23,7 +23,12 @@ export default function Navhead({ themeColor =""}) {
         // Clean up
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-
+    useEffect(() => {
+        const navNotch = document.getElementById("nav-notch");
+        if (navNotch) {
+            navNotch.style.transition = "top 0.02s ease-in-out";
+        }
+    }, []);
     const toggleMenu = () => {
         setShowMenu(!showMenu);
         // Prevent scrolling when menu is open on mobile
@@ -34,6 +39,22 @@ export default function Navhead({ themeColor =""}) {
         }
     };
 
+    // Add scroll event to update nav header classes on scroll
+    useEffect(() => {
+        let prevScroll = window.pageYOffset;
+        const handleScroll = () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > prevScroll) {
+                document.getElementById("nav-notch")?.classList.add("top-[-10vh]");
+            } else {
+                document.getElementById("nav-notch")?.classList.remove("top-[-10vh]");
+            }
+            prevScroll = currentScroll;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
         <div className="p-5 z-50 top-0 fixed flex w-screen justify-between">
             {/* Logo */}
@@ -45,7 +66,7 @@ export default function Navhead({ themeColor =""}) {
             </div>
 
             {/* Social Icons */}
-            <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 ${showMenu && isMobile ? 'hidden' : 'flex'}`}>
+            <div id='nav-notch' className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 ${showMenu && isMobile ? 'hidden' : 'flex'}`}>
                 <div 
                     className="py-5 px-5 h-[5vh] rounded-br-lg rounded-bl-lg text-white flex justify-center items-center gap-4"
                     style={{ backgroundColor: themeColor }}

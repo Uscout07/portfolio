@@ -17,36 +17,36 @@ export default function Projects({ themeColor = "" }) {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="snap-center flex flex-col justify-between p-4 rounded-lg min-h-[70%] max-md:min-w-[95%] max-lg:min-w-[50%] lg:min-w-[30%] hover:scale-95  transition-all duration-300 ease-in-out "
+                        className="group snap-center flex flex-col justify-between p-4 rounded-lg min-h-[70%] max-md:min-w-[95%] max-lg:min-w-[50%] lg:min-w-[30%] hover:scale-90  transition-all duration-300 ease-in-out "
                         style={{ backgroundColor: themeColor }}
                     >
                         <div>
-                            <img className="w-full object-cover rounded-lg " src={project.img} alt={project.name} />
+                            <img className="group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-[#1a1111] w-full object-cover rounded-lg  transition-all duration-300 ease-in-out " src={project.img} alt={project.name} />
                             <h3 className="text-[3vh] py-2 text-white">{project.name}</h3>
-                            <div className="flex items-center gap-2 text-white pb-2">
+                            <div className="project-card-info flex items-center gap-2 text-white pb-2">
                                 {project.github && (
                                     <Link href={project.github}>
-                                        <Icon className="hover:scale-125 active:scale-90 transition-all duration-300 ease-in-out" icon="ri:github-fill" width="32" height="32" />
+                                        <Icon className="group-hover:scale-110 group-hover:shadow-lg group-hover:drop-shadow-xl hover:scale-125 active:scale-90 transition-all duration-300 ease-in-out" icon="ri:github-fill" width="32" height="32" />
                                     </Link>
                                 )}
                                 {project.link && (
                                     <Link href={project.link}>
-                                        <Icon className="hover:scale-125 active:scale-90 transition-all duration-300 ease-in-out" icon="tabler:link" width="32" height="32" />
+                                        <Icon className="group-hover:scale-110 group-hover:shadow-lg group-hover:drop-shadow-xl hover:scale-125 active:scale-90 transition-all duration-300 ease-in-out" icon="tabler:link" width="32" height="32" />
                                     </Link>
                                 )}
                             </div>
                             <p className="ibm-plex-mono-regular text-[1.5vh] pb-2 text-white">{project.desc}</p>
                         </div>
-                        <div className="w-[90%] flex flex-wrap items-start py-2 max-md:gap-3 max-lg:gap-6 gap-8 px-2">
+                        <div className=" w-[90%] flex flex-wrap items-start py-2 max-md:gap-3 max-lg:gap-6 gap-8 px-2">
                             {project.icons.map((icon, idx) => (
-                                <Icon key={idx} icon={icon} className="hover:scale-150 transition-all duration-300 ease-in-out max-md:text-[1.5rem] max-lg:text-[1.5rem] text-[2rem]"  />
+                                <Icon key={idx} icon={icon} className="group-hover:scale-150 group-hover:shadow-lg group-hover:drop-shadow-xl bg-none transition-all duration-300 ease-in-out max-md:text-[1.5rem] max-lg:text-[1.5rem] text-[2rem]"  />
                             ))}
                         </div>
                     </div>
                 ))}
                 
             </div>
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" className="w-full flex items-center justify-center">
+            <div  data-aos-anchor-placement="top-center" data-aos-anchor=".project-card-info" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" className="w-full flex items-center justify-center">
             <p className="text-gray-600 animate-pulse text-center ibm-plex-mono text-3xl mx-auto  flex items-end justify-center">Pls Scroll &#10513; </p>
             </div>
         </div>
