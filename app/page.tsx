@@ -10,10 +10,13 @@ import Services from "./pages/services";
 import Contact from "./pages/contact";
 import Projects from "./pages/projects";
 import Navhead from "./components/header";
+import useThemeSafety from "./components/theme-context";
+
 
 export default function Page() {
+  const { isDark, mounted } = useThemeSafety();
   const [themeColor, setThemeColor] = useState("#06AA5B");
-
+  
   useEffect(() => {
     // Only run in browser environment
     if (typeof window === "undefined") return;
@@ -107,10 +110,9 @@ export default function Page() {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
-
+  
   return (
-    <div className="overflox-x-hidden w-screen"> 
-
+    <div className="overflow-x-hidden w-screen"> 
       <Navhead themeColor={themeColor} />
       <Hero themeColor={themeColor} />
       <Profile themeColor={themeColor} />
@@ -120,4 +122,5 @@ export default function Page() {
 
     </div>
   );
+
 }

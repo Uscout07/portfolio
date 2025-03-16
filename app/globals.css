@@ -1,14 +1,15 @@
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap";
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   margin: 0;
   width: 100vw;
-  background-image: url("/background.png"); /* Corrected path */
   background-repeat: repeat-y; 
   overflow-x: hidden;
   scroll-behavior: smooth;
+  
 }
+
 
 .ibm-plex-mono-regular {
   font-family: "IBM Plex Mono", monospace;

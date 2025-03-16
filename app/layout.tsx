@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Passion_One } from 'next/font/google';
 import Navhead from "./components/header";
+import { Providers } from "./components/theme-Provider";
 import "./globals.css";
 
 const passionOne = Passion_One({
@@ -21,16 +22,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={passionOne.className}>
-        {children}
+    <html lang="en" suppressHydrationWarning className="transition-colors">
+      <body className={`${passionOne.className}`}>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
 }
+

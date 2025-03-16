@@ -12,7 +12,7 @@ export default function Projects({ themeColor = "" }) {
 
     return (
         <div id='projects-section' className='w-screen overflow-hidden'>
-            <h1 className='text-center font-bold py-10 uppercase text-[8vh] max-lg:text-[6vh]'>Projects</h1>
+            <h1 className='text-center font-bold py-10 uppercase text-[8vh] max-lg:text-[6vh] dark:text-white'>Projects</h1>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 pb-10 scrollbar-hide">
                 {projects.map((project, index) => (
                     <div
@@ -47,7 +47,7 @@ export default function Projects({ themeColor = "" }) {
                 
             </div>
             <div  data-aos-anchor-placement="top-center" data-aos-anchor=".project-card-info" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" className="w-full flex items-center justify-center">
-            <p className="text-gray-600 animate-pulse text-center ibm-plex-mono text-3xl mx-auto  flex items-end justify-center">Pls Scroll &#10513; </p>
+            <p className="text-gray-600 dark:text-white animate-pulse text-center ibm-plex-mono text-3xl mx-auto  flex items-end justify-center">Pls Scroll &#10513; </p>
             </div>
         </div>
     );

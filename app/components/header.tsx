@@ -1,4 +1,5 @@
 'use client';
+import ThemeSwitcher from "./theme-switcher";
 import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
@@ -91,6 +92,7 @@ export default function Navhead({ themeColor =""}) {
                         height="24"
                     />
                     </Link>
+                    <ThemeSwitcher/>
                 </div>
             </div>
 
