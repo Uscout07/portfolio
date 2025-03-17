@@ -8,7 +8,7 @@ export default function Services({ themeColor = "" }) {
             <h1 className='text-center font-bold py-10 uppercase text-[8vh] max-md:text-[6vh]'>Services</h1>
             <div data-aos="zoom-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <p className='uppercase text-[5vh] ibm-plex-mono-regular px-8 max-md:text-[3vh]'>
-                to put my skills to practical use i started a freelance agency called <b style={{ color: themeColor }}>PARIKALPANA IO</b> BACK IN 2O24
+                to put my skills to practical use i started a freelance agency called <a href="http://parikalpana-io.vercel.app/" style={{ color: themeColor }}>PARIKALPANA IO</a> BACK IN 2O24
             </p>
             <div className='flex flex-col md:flex-row w-screen h-auto items-center justify-center gap-10 py-10'>
                 <Link 

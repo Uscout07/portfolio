@@ -69,27 +69,24 @@ export default function Navhead({ themeColor =""}) {
             {/* Social Icons */}
             <div id='nav-notch' className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 ${showMenu && isMobile ? 'hidden' : 'flex'}`}>
                 <div 
-                    className="py-5 px-5 h-[5vh] rounded-br-lg rounded-bl-lg text-white flex justify-center items-center gap-4"
+                    className="py-5 px-5 max-md:px-3 h-[5vh] rounded-br-lg rounded-bl-lg text-white flex justify-center items-center max-md:gap-3 gap-4"
                     style={{ backgroundColor: themeColor }}
                 >
                     <Link href="https://github.com/Uscout07"><Icon
-                        className="hover:scale-110 transition-all ease-in-out duration-200 cursor-pointer"
+                        className="hover:scale-110 transition-all ease-in-out duration-200 cursor-pointer max-sm:text-[5vw] text-[1.6vw]"
                         icon="mdi:github"
-                        width="24"
-                        height="24"
+                        
                     /></Link>
                      <Link href="https://www.linkedin.com/in/udit-pant-20869318b/"><Icon
-                        className="hover:scale-110 transition-all ease-in-out duration-200 cursor-pointer"
+                        className="hover:scale-110 transition-all ease-in-out duration-200 cursor-pointer max-sm:text-[5vw] text-[1.6vw]"
                         icon="mdi:linkedin"
-                        width="24"
-                        height="24"
+                        
                     /></Link>
                     <Link href="https://www.instagram.com/pantudit007/">
                     <Icon
-                        className="hover:scale-110 transition-all ease-in-out duration-200 cursor-pointer"
+                        className="hover:scale-110 transition-all ease-in-out duration-200 cursor-pointer max-sm:text-[5vw] text-[1.6vw]"
                         icon="ant-design:instagram-filled"
-                        width="24"
-                        height="24"
+                       
                     />
                     </Link>
                     <ThemeSwitcher/>
@@ -97,7 +94,7 @@ export default function Navhead({ themeColor =""}) {
             </div>
 
             {/* Hamburger / Cross Icons & Menu */}
-            <div className="ml-auto pr-5 relative">
+            <div className="ml-auto pr-2 md:pr-5 relative">
                 {/* Hamburger Icon */}
                 <Icon
                     onClick={toggleMenu}
@@ -131,7 +128,7 @@ export default function Navhead({ themeColor =""}) {
                 {/* Mobile Full Screen Menu */}
                 {isMobile && (
                     <div
-                        className={`fixed inset-0 bg-white bg-opacity-95 backdrop-blur-md z-50 flex flex-col justify-center items-center transition-all duration-500 ${
+                        className={`fixed inset-0 dark:[#] dark:bg-[#1E1E1E] bg-white bg-opacity-95 backdrop-blur-md z-50 flex flex-col justify-center items-center transition-all duration-500 ${
                             showMenu ? "opacity-100" : "opacity-0 pointer-events-none"
                         }`}
                     >

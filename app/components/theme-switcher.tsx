@@ -27,9 +27,9 @@ export default function ThemeSwitcher() {
             className="transition-colors duration-200"
         >
             {currentTheme === "light" ? (
-                <Icon icon="solar:moon-bold" width="24" height="24" />
+                <Icon icon="solar:moon-bold" className="max-md:text-[5vw] text-[1.6vw]"  />
             ) : (
-                <Icon icon="solar:sun-bold" width="24" height="24" />
+                <Icon icon="solar:sun-bold"  className="max-md:text-[5vw] text-[1.6vw]" />
             )}
         </button>
     );
