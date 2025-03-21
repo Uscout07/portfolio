@@ -108,10 +108,6 @@ export default function Page() {
     
     });
 
-    return () => {
-      // Clean up all ScrollTrigger instances
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
   }, []);
 
   const timer = setTimeout(() => {
