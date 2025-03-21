@@ -8,7 +8,7 @@ export default function Services({ themeColor = "" }) {
             <h1 className='text-center font-bold py-10 uppercase text-[8vh] max-md:text-[6vh]'>Services</h1>
             <div data-aos="zoom-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <p className='uppercase text-[5vh] ibm-plex-mono-regular px-8 max-md:text-[3vh]'>
-                to put my skills to practical use i started a freelance agency called <a href="http://parikalpana-io.vercel.app/" style={{ color: themeColor }}>PARIKALPANA IO</a> BACK IN 2O24
+                to put my skills to practical use i started a freelance agency called <a href="http://parikalpana-io.vercel.app/" className='hover:scale-110 transition-all duration-200 ease-in-out cursor-pointer' style={{ color: themeColor }}>PARIKALPANA IO</a> BACK IN 2O24
             </p>
             <div className='flex flex-col md:flex-row w-screen h-auto items-center justify-center gap-10 py-10'>
                 <Link 
@@ -48,7 +48,7 @@ export default function Services({ themeColor = "" }) {
                 </div>
             </div>
             <div className='flex items-center justify-center'>
-                <Link href="#contact-section" className="text-[4vh] max-md:text-[3vh] text-white py-2 px-5 rounded-full animate-pulse hover:animate-none transition-all duration-300 ease-in-out hover:scale-105 my-4"
+                <Link href="http://parikalpana-io.vercel.app/" className="text-[4vh] max-md:text-[3vh] text-white py-2 px-5 rounded-full animate-pulse hover:animate-none transition-all duration-300 ease-in-out hover:scale-105 my-4"
                     style={{ backgroundColor: themeColor }}
                 >
                     INQUIRE NOW
