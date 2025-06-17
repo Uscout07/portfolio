@@ -12,11 +12,11 @@ const passionOne = Passion_One({
 
 export const metadata: Metadata = {
   title: "Devfolio - Portfolio",
-  description: "A portfolio website showcasing my projects and skills built with Next.js.",
+  description: "A portfolio website showcasing my projects and skills",
   keywords: ["portfolio", "devfolio", "next.js", "developer", "projects"],
   openGraph: {
     title: "Devfolio - Portfolio",
-    description: "Explore my portfolio website built with Next.js.",
+    description: "Explore my portfolio website",
     type: "website",
     images: [
       {
