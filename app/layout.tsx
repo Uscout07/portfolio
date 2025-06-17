@@ -17,8 +17,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Devfolio - Portfolio",
     description: "Explore my portfolio website built with Next.js.",
-    url: "https://yourdomain.com",
     type: "website",
+    images: [
+      {
+        url: "/cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Devfolio Portfolio Preview",
+      },
+    ],
   },
 };
 
