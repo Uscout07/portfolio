@@ -18,8 +18,7 @@ export default function Projects({ themeColor = "" }) {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="group snap-center flex flex-col justify-between p-4 rounded-lg min-h-[70%] max-md:min-w-[95%] max-lg:min-w-[50%] lg:min-w-[30%] hover:scale-90  transition-all duration-300 ease-in-out "
-                        style={{ backgroundColor: themeColor }}
+                        className="group snap-center flex flex-col justify-between p-4 rounded-lg min-h-[70%] max-md:min-w-[95%] max-lg:min-w-[50%] lg:min-w-[30%] hover:scale-90  transition-all duration-300 ease-in-out bg-[var(--theme-color)]/70 backdrop-filter backdrop-blur-[15px] "
                     >
                         <div>
                             <img className="group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-[#1a1111] w-full object-cover rounded-lg  transition-all duration-300 ease-in-out " src={project.img} alt={project.name} />

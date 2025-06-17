@@ -33,9 +33,9 @@ export default function Profile({ themeColor = "#F89245" }) {
           modileProfileDiv
           relative w-full max-md:h-[30vh] 
           md:min-h-[50vh] z-20 flex flex-col
-          items-center justify-center max-md:justify-end
+          items-center justify-center max-md:justify-end bg-[var(--theme-color)]/70 backdrop-filter backdrop-blur-[1.5px]
         `}
-        style={{ backgroundColor: themeColor }}
+      
       >
         <div className="w-full px-6 py-2 font-bold text-black bg-white dark:text-white dark:bg-[#1E1E1E]  md:mt-[30vh] text-center uppercase overflow-hidden max-md:mt-2">
           <div className="relative text-[min(2.75vw)] whitespace-nowrap text-center z-40">
@@ -88,11 +88,10 @@ export default function Profile({ themeColor = "#F89245" }) {
             modileProfileDiv
             relative w-full max-md:h-[30vh] 
             md:min-h-[50vh] z-20 flex flex-col
-            items-center justify-center max-md:justify-end
+            items-center justify-center max-md:justify-end bg-[var(--theme-color)]/40 backdrop-filter backdrop-blur-[15px]
           `}
-          style={{ backgroundColor: themeColor }}
         >
-          <div className="w-full px-6 py-2 font-bold text-black bg-white dark:text-white dark:bg-[#1E1E1E]  md:mt-[30vh] text-center uppercase overflow-hidden max-md:mt-2">
+          <div className="w-full px-6 py-2 font-bold text-black bg-white/90 dark:text-white dark:bg-[#1E1E1E]/90 backdrop-blur-sm  md:mt-[30vh] text-center uppercase overflow-hidden max-md:mt-2">
             <div className="relative text-[min(2.75vw)] whitespace-nowrap text-center z-40">
               udit pant - delhi technological university - Bachelor of Technology
             </div>

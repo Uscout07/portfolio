@@ -42,8 +42,7 @@ export default function Hero({
           </div>
         </div>
         <div
-          className="relative w-full h-[50vh] z-20 flex flex-col items-center justify-center"
-          style={{ backgroundColor: themeColor }}
+          className={`relative w-full h-[50vh] z-20 flex flex-col items-center justify-center bg-[var(--theme-color)]/40 backdrop-filter backdrop-blur-[1.5px]`}
         >
           <div className="px-6 py-4 font-bold text-white max-md:mt-10 mt-24 text-7xl max-md:text-[10vw]">
             WELCOME TO MY DEVFOLIO
@@ -99,8 +98,8 @@ export default function Hero({
 
       {/* Call-to-Action Section */}
       <div
-        className="relative w-full h-[50vh] z-20 flex flex-col items-center justify-center"
-        style={{ backgroundColor: themeColor }}
+        className={`relative w-full h-[50vh] z-20 flex flex-col items-center justify-center bg-[var(--theme-color)]/70 backdrop-filter backdrop-blur-[20px]`}
+        
       >
         <div className={`px-6 py-4 font-bold text-white dark:text-[#1E1E1E] max-md:mt-10 mt-24 text-7xl max-md:text-[10vw] `}>
           WELCOME TO MY DEVFOLIO
@@ -109,10 +108,9 @@ export default function Hero({
         {/* Dynamic styling based on theme */}
         <Link
           href="#contact-section"
-          className={`text-3xl py-3 px-5 rounded-full animate-pulse hover:animate-none transition-all duration-300 ease-in-out hover:scale-105 ${
+          className={`text-3xl py-3 px-5 rounded-full text-[var(--theme-color)] hover:animate-pulse transition-all duration-300 ease-in-out hover:scale-105 ${
             isDark ? 'bg-[#1E1E1E]' : 'bg-white'
           }`}
-          style={{ color: themeColor }}
         >
           GET IN TOUCH
         </Link>

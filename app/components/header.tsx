@@ -27,7 +27,7 @@ export default function Navhead({ themeColor =""}) {
     useEffect(() => {
         const navNotch = document.getElementById("nav-notch");
         if (navNotch) {
-            navNotch.style.transition = "top 0.02s ease-in-out";
+            navNotch.style.transition = "top 0.05s ease-in-out";
         }
     }, []);
     const toggleMenu = () => {
@@ -41,36 +41,33 @@ export default function Navhead({ themeColor =""}) {
     };
 
     // Add scroll event to update nav header classes on scroll
-    useEffect(() => {
-        let prevScroll = window.pageYOffset;
-        const handleScroll = () => {
-            const currentScroll = window.pageYOffset;
-            if (currentScroll > prevScroll) {
-                document.getElementById("nav-notch")?.classList.add("top-[-10vh]");
-            } else {
-                document.getElementById("nav-notch")?.classList.remove("top-[-10vh]");
-            }
-            prevScroll = currentScroll;
-        };
+    // useEffect(() => {
+    //     let prevScroll = window.pageYOffset;
+    //     const handleScroll = () => {
+    //         const currentScroll = window.pageYOffset;
+    //         if (currentScroll > prevScroll) {
+    //             document.getElementById("nav-notch")?.classList.add("top-[-10vh]");
+    //         } else {
+    //             document.getElementById("nav-notch")?.classList.remove("top-[-10vh]");
+    //         }
+    //         prevScroll = currentScroll;
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
     return (
         <div className="p-5 z-50 top-0 fixed flex w-screen justify-between">
             {/* Logo */}
             <div
-                className="w-[7vh] h-[7vh] rounded-full text-white font-passion text-[5vh] flex items-center justify-center"
-                style={{ backgroundColor: themeColor }}
-            >
+                className={`w-[7vh] h-[7vh] rounded-full text-white font-passion text-[5vh] flex items-center justify-center bg-[var(--theme-color)]/70 backdrop-filter backdrop-blur-[2px]`}>
                 {logoText}
             </div>
 
             {/* Social Icons */}
             <div id='nav-notch' className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 ${showMenu && isMobile ? 'hidden' : 'flex'}`}>
                 <div 
-                    className="py-5 px-5 max-md:px-3 h-[5vh] rounded-br-lg rounded-bl-lg text-white flex justify-center items-center max-md:gap-3 gap-4"
-                    style={{ backgroundColor: themeColor }}
+                    className="py-5 px-5 max-md:px-3 h-[5vh] rounded-br-lg rounded-bl-lg text-white flex justify-center items-center max-md:gap-3 gap-4 bg-[var(--theme-color)]/70 backdrop-filter backdrop-blur-[2px]"
                 >
                     <Link href="https://github.com/Uscout07"><Icon
                         className="hover:scale-110 transition-all ease-in-out duration-200 cursor-pointer max-sm:text-[5vw] text-[1.6vw]"
@@ -98,9 +95,8 @@ export default function Navhead({ themeColor =""}) {
                 {/* Hamburger Icon */}
                 <Icon
                     onClick={toggleMenu}
-                    className="cursor-pointer transition-all duration-300 ease-in-out"
-                    style={{ 
-                        color: themeColor, 
+                    className="cursor-pointer transition-all duration-300 ease-in-out text-[var(--theme-color)]/70"
+                    style={{  
                         display: showMenu ? "none" : "block" 
                     }}
                     icon="solar:hamburger-menu-outline"
@@ -111,9 +107,8 @@ export default function Navhead({ themeColor =""}) {
                 {/* Cross Icon */}
                 <Icon
                     onClick={toggleMenu}
-                    className="cursor-pointer rounded-full p-2 mr-4 text-white transition-all duration-300 ease-in-out"
+                    className="cursor-pointer rounded-full p-2 mr-4 text-white bg-[var(--theme-color)]/40 backdrop-filter backdrop-blur-[15px] transition-all duration-300 ease-in-out"
                     style={{ 
-                        backgroundColor: themeColor,
                         display: showMenu ? "block" : "none",
                         position: isMobile ? "fixed" : "absolute",
                         top: isMobile ? "20px" : "auto",
@@ -128,7 +123,7 @@ export default function Navhead({ themeColor =""}) {
                 {/* Mobile Full Screen Menu */}
                 {isMobile && (
                     <div
-                        className={`fixed inset-0 dark:[#] dark:bg-[#1E1E1E] bg-white bg-opacity-95 backdrop-blur-md z-50 flex flex-col justify-center items-center transition-all duration-500 ${
+                        className={`fixed inset-0 bg-[var(--theme-color)]/40 backdrop-filter backdrop-blur-[10px] z-50 flex flex-col justify-center items-center transition-all duration-500 ${
                             showMenu ? "opacity-100" : "opacity-0 pointer-events-none"
                         }`}
                     >
@@ -136,7 +131,7 @@ export default function Navhead({ themeColor =""}) {
                             {/* Social Icons in Menu for Mobile */}
                             <div className="flex gap-6 mb-8">
                                 <Link href="https://github.com/Uscout07">
-                                    <div className="rounded-full p-3" style={{ backgroundColor: themeColor }}>
+                                    <div className="rounded-full p-3 " style={{ backgroundColor: themeColor }}>
                                         <Icon
                                             className="text-white"
                                             icon="mdi:github"
@@ -249,7 +244,7 @@ export default function Navhead({ themeColor =""}) {
                 {/* Desktop Menu - Only show for non-mobile */}
                 {!isMobile && (
                     <div
-                        className="absolute top-[10vh] right-0 pr-5 flex flex-col font-ibm text-[4vh] gap-[0.5vh] mr-4 px-4 ibm-plex-mono-regular md:mr-4 transition-all duration-300 ease-in-out bg-[#ffffffa0] backdrop-blur-sm"
+                        className="absolute top-[10vh] right-0 pr-5 flex flex-col font-ibm text-[4vh] gap-[0.5vh] mr-4 px-4 ibm-plex-mono-regular md:mr-4 transition-all duration-300 ease-in-out bg-[var(--theme-color)]/40 backdrop-filter backdrop-blur-[15px]"
                         style={{ 
                             borderRightWidth: "2px",
                             borderRightColor: themeColor,
